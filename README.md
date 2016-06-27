@@ -5,6 +5,6 @@ Update script provided by DuckDNS may not be useful as is for users on ACT broad
 This script identifies your actual IP address from portal.acttv.in portal and calls DuckDNS's update API. This script can be scheduled as cron job similar to the DuckDNS's default script.
 
 ### Usage
-```python [script_name>].py -d [your domain] -t [your token]```
+```python actbb_duckdns_update.py -d [your domain] -t [your token]```
 or for help
-```python [script_name].py -h```
+```python actbb_duckdns_update.py -h```
