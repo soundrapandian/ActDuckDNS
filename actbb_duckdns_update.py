@@ -36,20 +36,12 @@ def main():
     Updates it to DuckDNS
     :return: Nothing... None
     """
-    token = None
-    domain = None
     parser = OptionParser()
     parser.add_option('-d', '--domain', dest='domain', help='DuckDNS Domain')
     parser.add_option('-t', '--token', dest='token', help='DuckDNS Token')
     (options, args) = parser.parse_args()
-    for opt_key, opt_value in options:
-        if opt_key == 'domain':
-            domain = opt_value
-            continue
-        if opt_key == 'token':
-            token = opt_value
-            continue
-
+    domain = options.domain
+    token = options.token
     ip = find_your_ip()
     if token and domain and ip:
         update_your_ip(domain, token, ip)
